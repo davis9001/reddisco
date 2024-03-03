@@ -1,5 +1,6 @@
 <script lang="ts">
   import { onMount } from "svelte"
+  import { subreddits } from "$lib"
 
   let inviteLink = ""
   let postTitle = ""
@@ -48,9 +49,9 @@
   })
 </script>
 
-<main class=" text-center min-h-svh bg-slate-950 text-white p-8">
-  <div class="container max-w-5xl mx-auto">
-    <h1 class="text-3xl">Discord Server Description</h1>
+<main class="text-center min-h-svh bg-slate-950 text-white p-8">
+  <div class="flex flex-col gap-5 container max-w-5xl mx-auto">
+    <h1 class="text-3xl">Discord Server Reddit Post Helper</h1>
     <div>
       <label>
         Enter Discord Invite Link:
@@ -73,18 +74,36 @@
       <input
         type="text"
         bind:value={postTitle}
+        placeholder="Reddit Post Title"
         class="border border-gray-300 rounded p-2 m-2 h-12 w-full text-black text-center"
       />
     </label>
-    <input
-      type="text"
-      class="border border-gray-300 rounded p-2 m-2 h-12 w-full text-black text-center"
-      placeholder="AI Summary of Server"
-    />
+    <label>
+      AI Prompt:
+      <input
+        type="text"
+        placeholder="AI prompt direction to help generate better post titles (optional)"
+        class="border border-gray-300 rounded p-2 m-2 h-12 w-full text-black text-center"
+      />
+    </label>
     <button
       on:click={handleSubmit}
       class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-      >Get Description</button
+      >AI Revamp Title</button
     >
+    <div>
+      <h2>Subreddits (ctrl+click):</h2>
+      <div class="flex flex-col gap-2">
+        {#each subreddits["For Discord"] as subreddit}
+          <a
+            href="{subreddit}/submit?title={postTitle}&url={inviteLink}"
+            class="bg-orange-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+            target="_blank"
+          >
+            {subreddit}
+          </a>
+        {/each}
+      </div>
+    </div>
   </div>
 </main>
