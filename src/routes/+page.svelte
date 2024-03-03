@@ -94,16 +94,19 @@
       >AI Revamp Title</button
     >
     <div>
-      <h2>Subreddits (ctrl+click):</h2>
+      <h4 class="text-xl m-2">Subreddits (ctrl+click):</h4>
       <div class="flex flex-col gap-2">
-        {#each subreddits["For Discord"] as subreddit}
-          <a
-            href="{subreddit}/submit?title={postTitle}&url={inviteLink}"
-            class="bg-orange-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded overflow-hidden"
-            target="_blank"
-          >
-            {subreddit}
-          </a>
+        {#each Object.entries(subreddits) as [category, links]}
+          <h2 class="text-md mt-2">{category}:</h2>
+          {#each links as subreddit}
+            <a
+              href="{subreddit}/submit?title={postTitle}&url={inviteLink}"
+              class="bg-orange-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded overflow-hidden"
+              target="_blank"
+            >
+              {subreddit}
+            </a>
+          {/each}
         {/each}
       </div>
     </div>
