@@ -65,7 +65,7 @@
         <button
           on:click={handleSubmit}
           class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-          >Get Description</button
+          >Get Server Description</button
         >
       </div>
     </div>
@@ -84,11 +84,13 @@
         type="text"
         placeholder="AI prompt direction to help generate better post titles (optional)"
         class="border border-gray-300 rounded p-2 m-2 h-12 w-full text-black text-center"
+        disabled
       />
     </label>
     <button
       on:click={handleSubmit}
-      class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+      disabled
+      class="bg-blue-500 hover:bg-blue-700 disabled:bg-gray-500 text-white font-bold py-2 px-4 rounded"
       >AI Revamp Title</button
     >
     <div>
