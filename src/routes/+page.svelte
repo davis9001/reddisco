@@ -99,7 +99,7 @@
         {#each subreddits["For Discord"] as subreddit}
           <a
             href="{subreddit}/submit?title={postTitle}&url={inviteLink}"
-            class="bg-orange-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+            class="bg-orange-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded overflow-hidden"
             target="_blank"
           >
             {subreddit}
