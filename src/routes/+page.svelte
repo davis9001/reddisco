@@ -6,6 +6,9 @@
   let postTitle = ""
   let promptAdvice = ""
 
+  let disableDiscordButton = false
+  let disableAIButton = false
+
   const fetchServerDescription = async (inviteCode: string) => {
     try {
       const response = await fetch(
@@ -37,14 +40,17 @@
     }
   }
 
-  const handleSubmit = () => {
+  const handleDiscordSubmit = async () => {
     if (inviteLink.trim() !== "") {
+      disableDiscordButton = true
       const inviteCode = inviteCodeFromInput(inviteLink)
-      fetchServerDescription(inviteCode)
+      await fetchServerDescription(inviteCode)
+      disableDiscordButton = false
     }
   }
 
   async function assistTitleWithAI() {
+    disableAIButton = true
     const response = await fetch(
       `/api/ai?postTitle=${encodeURIComponent(postTitle)}&promptAdvice=${encodeURIComponent(promptAdvice)}`
     ).catch((error) => {
@@ -53,6 +59,8 @@
 
     const data = await response?.json()
     postTitle = data.generatedPostTitle
+
+    disableAIButton = false
   }
 
   onMount(() => {
@@ -74,9 +82,12 @@
       </label>
       <div>
         <button
-          on:click={handleSubmit}
+          on:click={handleDiscordSubmit}
+          disabled={disableDiscordButton}
           class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-          >Get Server Description</button
+          >{disableDiscordButton
+            ? "Loading..."
+            : "Get Server Description"}</button
         >
       </div>
     </div>
@@ -100,8 +111,9 @@
     </label>
     <button
       on:click={assistTitleWithAI}
+      disabled={disableAIButton}
       class="bg-blue-500 hover:bg-blue-700 disabled:bg-gray-500 text-white font-bold py-2 px-4 rounded"
-      >AI Assist Title</button
+      >{disableAIButton ? "Loading..." : "AI Assist Title"}</button
     >
     <div>
       <h4 class="text-xl m-2">Subreddits (ctrl+click):</h4>
