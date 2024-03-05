@@ -92,7 +92,7 @@
         >
       </div>
     </div>
-    <label for="">
+    <label>
       Post Title:
       <input
         type="text"
