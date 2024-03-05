@@ -1,7 +1,7 @@
 // place files you want to import through the `$lib` alias in this folder.
 
 export const subreddits = {
-  "For Discord": [
+  "For Discord / Self-Promotion": [
     "https://www.reddit.com/r/DiscordAdsKingdom/",
     "https://www.reddit.com/r/discordservers_/",
     "https://www.reddit.com/r/findaserver/",
