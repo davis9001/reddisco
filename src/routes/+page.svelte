@@ -4,6 +4,7 @@
 
   let inviteLink = ""
   let postTitle = ""
+  let promptAdvice = ""
 
   const fetchServerDescription = async (inviteCode: string) => {
     try {
@@ -39,9 +40,19 @@
   const handleSubmit = () => {
     if (inviteLink.trim() !== "") {
       const inviteCode = inviteCodeFromInput(inviteLink)
-      console.log(inviteCode)
       fetchServerDescription(inviteCode)
     }
+  }
+
+  async function assistTitleWithAI() {
+    const response = await fetch(
+      `/api/ai?postTitle=${encodeURIComponent(postTitle)}&promptAdvice=${encodeURIComponent(promptAdvice)}`
+    ).catch((error) => {
+      console.error("Error:", error)
+    })
+
+    const data = await response?.json()
+    postTitle = data.generatedPostTitle
   }
 
   onMount(() => {
@@ -82,16 +93,15 @@
       AI Prompt:
       <input
         type="text"
+        bind:value={promptAdvice}
         placeholder="AI prompt direction to help generate better post titles (optional)"
         class="border border-gray-300 rounded p-2 m-2 h-12 w-full text-black text-center"
-        disabled
       />
     </label>
     <button
-      on:click={handleSubmit}
-      disabled
+      on:click={assistTitleWithAI}
       class="bg-blue-500 hover:bg-blue-700 disabled:bg-gray-500 text-white font-bold py-2 px-4 rounded"
-      >AI Revamp Title</button
+      >AI Assist Title</button
     >
     <div>
       <h4 class="text-xl m-2">Subreddits (ctrl+click):</h4>
