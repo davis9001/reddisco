@@ -85,7 +85,7 @@
         <button
           on:click={handleDiscordSubmit}
           disabled={disableDiscordButton}
-          class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+          class="bg-blue-500 hover:bg-blue-700 disabled:bg-gray-500 text-white font-bold py-2 px-4 rounded"
           >{disableDiscordButton
             ? "Loading..."
             : "Get Server Description"}</button
@@ -94,7 +94,7 @@
     </div>
     <label>
       Post Title:
-      <input
+      <textarea
         type="text"
         bind:value={postTitle}
         placeholder="Reddit Post Title"
