@@ -77,7 +77,7 @@
         <input
           type="text"
           bind:value={inviteLink}
-          placeholder="Discord Invite Link (https://discord.gg/[code)"
+          placeholder="Discord Invite Link (https://discord.gg/[code])"
           class="border border-gray-300 rounded p-2 h-12 w-full text-black text-center"
         />
       </label>
