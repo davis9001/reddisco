@@ -73,19 +73,19 @@
     <h1 class="text-3xl">Discord Server Reddit Post Helper</h1>
     <div>
       <label>
-        Enter Discord Invite Link:
+        <div class="mb-2">Enter Discord Invite Link:</div>
         <input
           type="text"
           bind:value={inviteLink}
           placeholder="Discord Invite Link (https://discord.gg/[code)"
-          class="border border-gray-300 rounded p-2 m-2 h-12 w-full text-black text-center"
+          class="border border-gray-300 rounded p-2 h-12 w-full text-black text-center"
         />
       </label>
       <div>
         <button
           on:click={handleDiscordSubmit}
           disabled={disableDiscordButton}
-          class="bg-blue-500 hover:bg-blue-700 disabled:bg-gray-500 text-white font-bold py-2 px-4 rounded"
+          class="bg-blue-500 hover:bg-blue-700 disabled:bg-gray-500 text-white font-bold py-2 px-4 my-2 rounded w-full"
           >{disableDiscordButton
             ? "Loading..."
             : "Get Server Description"}</button
@@ -93,21 +93,21 @@
       </div>
     </div>
     <label>
-      Post Title:
+      <div class="mb-2">Post Title:</div>
       <textarea
         type="text"
         bind:value={postTitle}
         placeholder="Reddit Post Title"
-        class="border border-gray-300 rounded p-2 m-2 h-12 w-full text-black text-center"
+        class="border border-gray-300 rounded p-2 h-12 w-full text-black text-center"
       />
     </label>
     <label>
-      AI Prompt:
+      <div class="mb-2">AI Prompt:</div>
       <input
         type="text"
         bind:value={promptAdvice}
         placeholder="AI prompt direction to help generate better post titles (optional)"
-        class="border border-gray-300 rounded p-2 m-2 h-12 w-full text-black text-center"
+        class="border border-gray-300 rounded p-2 h-12 w-full text-black text-center"
       />
     </label>
     <button
@@ -117,7 +117,7 @@
       >{disableAIButton ? "Loading..." : "AI Assist Title"}</button
     >
     <div>
-      <h4 class="text-xl m-2">Subreddits (ctrl+click):</h4>
+      <h4 class="text-xl">Subreddits (ctrl+click):</h4>
       <div class="flex flex-col gap-2">
         {#each Object.entries(subreddits) as [category, links]}
           <h2 class="text-md mt-2">{category}:</h2>
@@ -135,3 +135,6 @@
     </div>
   </div>
 </main>
+
+<style>
+</style>
