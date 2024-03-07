@@ -10,6 +10,7 @@ export const subreddits = {
     "https://www.reddit.com/r/discordadvertisehere/",
     "https://www.reddit.com/r/MakeDiscordFriends/",
     "https://www.reddit.com/r/selfpromo/",
+    "https://www.reddit.com/r/Chatpals/",
   ],
   "Lonely, Bored, etc.": [
     "https://www.reddit.com/r/selflove/",
