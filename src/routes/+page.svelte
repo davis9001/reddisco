@@ -69,7 +69,7 @@
 </script>
 
 <main
-  class="text-center min-h-svh bg-gradient-to-tr from-gray-900 to-gray-700 text-white p-8"
+  class="text-center min-h-svh bg-gradient-to-tr from-indigo-900 to-emerald-900 text-white p-8"
 >
   <div class="flex flex-col gap-5 container max-w-5xl mx-auto">
     <h1 class="text-3xl">Discord Server Reddit Post Helper</h1>
@@ -80,7 +80,7 @@
           type="text"
           bind:value={inviteLink}
           placeholder="Discord Invite Link (https://discord.gg/[code])"
-          class="border border-gray-300 rounded p-2 h-12 w-full text-white bg-black text-center"
+          class="border border-gray-300 rounded p-2 h-12 w-full text-white bg-transparent text-center"
         />
       </label>
       <div>
@@ -100,7 +100,7 @@
         type="text"
         bind:value={postTitle}
         placeholder="Reddit Post Title"
-        class="border border-gray-300 rounded p-2 h-12 w-full text-white bg-black text-center"
+        class="border border-gray-300 rounded p-2 h-12 w-full text-white bg-transparent text-center"
       />
     </label>
     <label>
@@ -109,13 +109,13 @@
         type="text"
         bind:value={promptAdvice}
         placeholder="AI prompt direction to help generate better post titles (optional)"
-        class="border border-gray-300 rounded p-2 h-12 w-full text-white bg-black text-center"
+        class="border border-gray-300 rounded p-2 h-12 w-full text-white bg-transparent text-center"
       />
     </label>
     <button
       on:click={assistTitleWithAI}
       disabled={disableAIButton}
-      class="bg-blue-500 hover:bg-blue-700 disabled:bg-gray-500 text-white font-bold py-2 px-4 rounded"
+      class="bg-red-800 hover:bg-red-900 disabled:bg-gray-500 text-white font-bold py-2 px-4 rounded"
       >{disableAIButton ? "Loading..." : "AI Assist Title"}</button
     >
     <div>
@@ -126,7 +126,7 @@
           {#each links as subreddit}
             <a
               href="{subreddit}submit?title={postTitle}&url={inviteLink}"
-              class="bg-orange-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded overflow-hidden"
+              class="bg-amber-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded overflow-hidden"
               target="_blank"
             >
               {subreddit}
