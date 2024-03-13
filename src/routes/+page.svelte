@@ -68,7 +68,9 @@
   })
 </script>
 
-<main class="text-center min-h-svh bg-slate-950 text-white p-8">
+<main
+  class="text-center min-h-svh bg-gradient-to-tr from-gray-900 to-gray-700 text-white p-8"
+>
   <div class="flex flex-col gap-5 container max-w-5xl mx-auto">
     <h1 class="text-3xl">Discord Server Reddit Post Helper</h1>
     <div>
@@ -78,7 +80,7 @@
           type="text"
           bind:value={inviteLink}
           placeholder="Discord Invite Link (https://discord.gg/[code])"
-          class="border border-gray-300 rounded p-2 h-12 w-full text-black text-center"
+          class="border border-gray-300 rounded p-2 h-12 w-full text-white bg-black text-center"
         />
       </label>
       <div>
@@ -98,7 +100,7 @@
         type="text"
         bind:value={postTitle}
         placeholder="Reddit Post Title"
-        class="border border-gray-300 rounded p-2 h-12 w-full text-black text-center"
+        class="border border-gray-300 rounded p-2 h-12 w-full text-white bg-black text-center"
       />
     </label>
     <label>
@@ -107,7 +109,7 @@
         type="text"
         bind:value={promptAdvice}
         placeholder="AI prompt direction to help generate better post titles (optional)"
-        class="border border-gray-300 rounded p-2 h-12 w-full text-black text-center"
+        class="border border-gray-300 rounded p-2 h-12 w-full text-white bg-black text-center"
       />
     </label>
     <button
