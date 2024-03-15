@@ -1,11 +1,9 @@
 <script lang="ts">
   import { page } from "$app/stores"
 
-  const gtag = process.env.GOOGLEANALYTICS_PROP_ID
-
   $: {
     if (typeof gtag !== "undefined") {
-      gtag("config", gtag, {
+      gtag("config", "G-PQZB6VEV5Y", {
         page_title: document.title,
         page_path: $page.url.pathname,
       })
@@ -14,7 +12,7 @@
 </script>
 
 <svelte:head>
-  <script async src="https://www.googletagmanager.com/gtag/js?id={gtag}">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PQZB6VEV5Y">
   </script>
   <script>
     window.dataLayer = window.dataLayer || []
