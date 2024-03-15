@@ -8,8 +8,8 @@ export const subreddits = {
     "https://www.reddit.com/r/DiscordAdvertising/",
     "https://www.reddit.com/r/advertisediscord/",
     "https://www.reddit.com/r/discordadvertisehere/",
-    "https://www.reddit.com/r/MakeDiscordFriends/",
-    // "https://www.reddit.com/r/selfpromo/",
+    // "https://www.reddit.com/r/MakeDiscordFriends/",
+    "https://www.reddit.com/r/selfpromo/",
     // "https://www.reddit.com/r/Chatpals/",
   ],
   "Lonely, Bored, etc.": [
