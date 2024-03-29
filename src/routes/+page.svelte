@@ -71,8 +71,11 @@
 <main
   class="text-center min-h-svh bg-gradient-to-tr from-indigo-900 to-emerald-900 text-white p-8"
 >
-  <div class="flex flex-col gap-5 container max-w-5xl mx-auto">
-    <h1 class="text-3xl">Discord Server Reddit Post Helper</h1>
+  <div class="flex flex-col gap-3 container max-w-5xl mx-auto">
+    <h1 class="text-3xl">Reddisco!</h1>
+    <h2 class="text-xl font-extralight mb-4">
+      An Assistant for Discord Server Posts. <i>Now with AI!</i>
+    </h2>
     <div>
       <label>
         <div class="mb-2">Enter Discord Invite Link:</div>
