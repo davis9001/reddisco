@@ -132,7 +132,7 @@
               class="bg-amber-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded overflow-hidden"
               target="_blank"
             >
-              {subreddit}
+              {subreddit.substring("https://www.reddit.com".length)}
             </a>
           {/each}
         {/each}
