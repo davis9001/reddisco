@@ -8,5 +8,13 @@
 <slot class="m-0 p-0" />
 
 <footer class="text-center bg-black text-white p-8">
-  <a href="https://discord.gg/SAjnQt5rdC">Brought to you by *Space</a>
+  <a href="https://discord.gg/SAjnQt5rdC" target="_blank" class="font-bold"
+    >Brought to you by *Space</a
+  >
+  | <i>Made with SvelteKit and hosted on Cloudflare</i> |
+  <a
+    href="https://github.com/davis9001/reddisco"
+    target="_blank"
+    class="font-bold">Open Source on Github</a
+  >
 </footer>
