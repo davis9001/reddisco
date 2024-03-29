@@ -2,14 +2,18 @@
 
 export const subreddits = {
   "For Discord / Self-Promotion": [
-    "https://www.reddit.com/r/DiscordAdsKingdom/",
-    "https://www.reddit.com/r/discordservers_/",
-    "https://www.reddit.com/r/findaserver/",
-    "https://www.reddit.com/r/DiscordAdvertising/",
-    "https://www.reddit.com/r/advertisediscord/",
     "https://www.reddit.com/r/discordadvertisehere/",
-    // "https://www.reddit.com/r/MakeDiscordFriends/",
+    "https://www.reddit.com/r/PromoteDiscordServer/",
+    "https://www.reddit.com/r/DiscordAdvertising/",
+    "https://www.reddit.com/r/DiscordAdsKingdom/",
+    "https://www.reddit.com/r/advertisediscord/",
+    "https://www.reddit.com/r/DiscordServersAd/",
+    "https://www.reddit.com/r/DiscordDirectory/",
+    "https://www.reddit.com/r/discordservers_/",
+    "https://www.reddit.com/r/DiscordGroups/",
+    "https://www.reddit.com/r/findaserver/",
     "https://www.reddit.com/r/selfpromo/",
+    // "https://www.reddit.com/r/MakeDiscordFriends/",
     // "https://www.reddit.com/r/Chatpals/",
   ],
   "Lonely, Bored, etc.": [
