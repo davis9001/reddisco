@@ -4,6 +4,8 @@ This is a web app using Svelte and Cloudflare Pages and Workers.
 
 ## Developing
 
+After cloning the repo to your workstation, copy the `.env-example` file into `.env` and replace the values with your own.
+
 ```bash
 yarn dev
 
