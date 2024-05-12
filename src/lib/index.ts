@@ -13,6 +13,7 @@ export const subreddits = {
     "https://www.reddit.com/r/DiscordGroups/",
     "https://www.reddit.com/r/findaserver/",
     "https://www.reddit.com/r/selfpromo/",
+    "https://www.reddit.com/r/GroupFind/",
     // "https://www.reddit.com/r/MakeDiscordFriends/",
     // "https://www.reddit.com/r/Chatpals/",
   ],
