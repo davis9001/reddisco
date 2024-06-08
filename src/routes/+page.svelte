@@ -74,7 +74,7 @@
   <div class="flex flex-col gap-3 container max-w-5xl mx-auto">
     <h1 class="text-3xl">Reddisco!</h1>
     <h2 class="text-xl font-extralight mb-4">
-      An Assistant for Discord Server Posts. <i>Now with AI!</i>
+      An Assistant for Discord Server Posts. <i>✨ Now with AI!</i>
     </h2>
     <div>
       <label>
@@ -128,7 +128,7 @@
           <h2 class="text-md mt-2">{category}:</h2>
           {#each links as subreddit}
             <a
-              href="{subreddit}submit?title={postTitle}&url={inviteLink}"
+              href="{subreddit}submit?title={postTitle}&link={inviteLink}&type=link"
               class="bg-amber-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded overflow-hidden"
               target="_blank"
             >
