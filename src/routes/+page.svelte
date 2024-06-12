@@ -128,7 +128,7 @@
           <h2 class="text-md mt-2">{category}:</h2>
           {#each links as subreddit}
             <a
-              href="{subreddit}submit?title={postTitle}&link={inviteLink}&type=link"
+              href="{subreddit}submit?title={postTitle}&url={inviteLink}&type=link"
               class="bg-amber-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded overflow-hidden"
               target="_blank"
             >
