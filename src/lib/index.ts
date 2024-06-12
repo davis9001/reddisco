@@ -5,6 +5,7 @@ export const subreddits = {
     "https://www.reddit.com/r/discordadvertisehere/",
     "https://www.reddit.com/r/PromoteDiscordServer/",
     "https://www.reddit.com/r/DiscordAdvertising/",
+    "https://www.reddit.com/r/AdvertisingCentral/",
     "https://www.reddit.com/r/DiscordAdsKingdom/",
     "https://www.reddit.com/r/advertisediscord/",
     "https://www.reddit.com/r/DiscordServersAd/",
