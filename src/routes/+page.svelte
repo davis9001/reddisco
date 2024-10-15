@@ -43,6 +43,9 @@
   const handleDiscordSubmit = async () => {
     if (inviteLink.trim() !== "") {
       disableDiscordButton = true
+      if (!inviteLink.includes("https://discord.gg/")) {
+        inviteLink = "https://discord.gg/" + inviteLink
+      }
       const inviteCode = inviteCodeFromInput(inviteLink)
       await fetchServerDescription(inviteCode)
       disableDiscordButton = false
@@ -78,7 +81,7 @@
     </h2>
     <div>
       <label>
-        <div class="mb-2">Enter Discord Invite Link:</div>
+        <div class="mb-2">Enter Discord Invite Link (or just the code):</div>
         <input
           type="text"
           bind:value={inviteLink}
