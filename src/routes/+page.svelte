@@ -74,6 +74,7 @@
 <main
   class="text-center min-h-svh bg-gradient-to-tr from-indigo-900 to-emerald-900 text-white p-8"
 >
+<form autocomplete="on">
   <div class="flex flex-col gap-3 container max-w-5xl mx-auto">
     <h1 class="text-3xl">Reddisco!</h1>
     <h2 class="text-xl font-extralight mb-4">
@@ -83,65 +84,64 @@
       <label>
         <div class="mb-2">Enter Discord Invite Link (or just the code):</div>
         <input
-          type="text"
-          bind:value={inviteLink}
-          placeholder="Discord Invite Link (https://discord.gg/[code])"
-          class="border border-gray-300 rounded p-2 h-12 w-full text-white bg-transparent text-center"
+        type="text"
+        bind:value={inviteLink}
+        placeholder="Discord Invite Link (https://discord.gg/[code])"
+        class="border border-gray-300 rounded p-2 h-12 w-full text-white bg-transparent text-center"
         />
       </label>
       <div>
         <button
-          on:click={handleDiscordSubmit}
-          disabled={disableDiscordButton}
-          class="bg-blue-500 hover:bg-blue-700 disabled:bg-gray-500 text-white font-bold py-2 px-4 my-2 rounded w-full"
-          >{disableDiscordButton
-            ? "Loading..."
-            : "Get Server Description"}</button
-        >
+        on:click={handleDiscordSubmit}
+        disabled={disableDiscordButton}
+        class="bg-blue-500 hover:bg-blue-700 disabled:bg-gray-500 text-white font-bold py-2 px-4 my-2 rounded w-full"
+        >{disableDiscordButton
+          ? "Loading..."
+          : "Get Server Description"}</button>
       </div>
     </div>
     <label>
       <div class="mb-2">Post Title:</div>
       <textarea
-        type="text"
-        bind:value={postTitle}
-        placeholder="Reddit Post Title"
-        class="border border-gray-300 rounded p-2 h-12 w-full text-white bg-transparent text-center"
+      bind:value={postTitle}
+      placeholder="Reddit Post Title"
+      class="border border-gray-300 rounded p-2 h-12 w-full text-white bg-transparent text-center"
       />
     </label>
     <label>
       <div class="mb-2">AI Prompt:</div>
       <input
-        type="text"
-        bind:value={promptAdvice}
-        placeholder="AI prompt direction to help generate better post titles (optional)"
-        class="border border-gray-300 rounded p-2 h-12 w-full text-white bg-transparent text-center"
+      type="text"
+      bind:value={promptAdvice}
+      placeholder="AI prompt direction to help generate better post titles (optional)"
+      class="border border-gray-300 rounded p-2 h-12 w-full text-white bg-transparent text-center"
       />
     </label>
     <button
-      on:click={assistTitleWithAI}
-      disabled={disableAIButton}
-      class="bg-red-800 hover:bg-red-900 disabled:bg-gray-500 text-white font-bold py-2 px-4 rounded"
-      >{disableAIButton ? "Loading..." : "AI Assist Title"}</button
+    on:click={assistTitleWithAI}
+    disabled={disableAIButton}
+    class="bg-red-800 hover:bg-red-900 disabled:bg-gray-500 text-white font-bold py-2 px-4 rounded"
+    >{disableAIButton ? "Loading..." : "AI Assist Title"}</button
     >
     <div>
       <h4 class="text-xl">Subreddits (ctrl+click):</h4>
       <div class="flex flex-col gap-2">
         {#each Object.entries(subreddits) as [category, links]}
-          <h2 class="text-md mt-2">{category}:</h2>
-          {#each links as subreddit}
-            <a
-              href="{subreddit}submit?title={postTitle}&url={inviteLink}&type=link"
-              class="bg-amber-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded overflow-hidden"
-              target="_blank"
-            >
-              {subreddit.substring("https://www.reddit.com".length)}
-            </a>
-          {/each}
-        {/each}
-      </div>
+        <h2 class="text-md mt-2">{category}:</h2>
+        {#each links as subreddit}
+        <a
+        href="{subreddit}submit?title={postTitle}&url={inviteLink}&type=link"
+        class="bg-amber-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded overflow-hidden"
+        target="_blank"
+        >
+        {subreddit.substring("https://www.reddit.com".length)}
+      </a>
+      {/each}
+      {/each}
     </div>
   </div>
+</div>
+</form>
 </main>
 
 <style>
